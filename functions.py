@@ -241,34 +241,34 @@ def make_list(list_values, *args):
      # loop to iterate through length of args parameter
      for i in range(len(args)):
           # append the args at each index to the existing list
-          # listValues
+          # list_values
           list_values.append(args[i])
 
      # return the appended list
      return list_values
 
-# outterFunction() function accepts a word as argument and returns a tupple.
+# outter_function() function accepts a word as argument and returns a tuple.
 def outter_function(word):
-     # innerFunction() function accepts a word and the count to multiple
+     # inner_function() function accepts a word and the count to multiple
      # the word to count times and returns the multiplied word
      def inner_function(word, count):
           # if count is 1 return the word
           if count == 1:
                return word
-          #otherwise, just return by appending the word with recursive call
+          # otherwise, just return by appending the word with recursive call
           # to the inner function
           else:                              
                return str(word) + str(inner_function(word, count-1))
 
      # return the tuple where the tuple at index[0] holds the word
-     # and the index[1] holds the resulant of the innerFunction()
+     # and the index[1] holds the resulant of the inner_function()
      return (word, inner_function(word, 3))
 
 # test cases:
-# test for the makeList() by passing the integer list with some unknown arguments
+# test for the make_list() by passing the integer list with some unknown arguments
 print(make_list([1, 2, 3, 4, 5, 6], 8, 6, 3, 2, 10))
 
-# test for the makeList() by passing the string with some unknown string arguments
+# test for the make_list() by passing the string with some unknown string arguments
 print(make_list(["sunday", "python", "funday"], "Danielle", "ice cream", "birthday", "pizza"))
 
 
